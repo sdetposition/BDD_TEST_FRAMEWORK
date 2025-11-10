@@ -1,0 +1,4 @@
+Dashboard Count Details:
+Users - 100
+Reviews - 10
+Approvals - 5

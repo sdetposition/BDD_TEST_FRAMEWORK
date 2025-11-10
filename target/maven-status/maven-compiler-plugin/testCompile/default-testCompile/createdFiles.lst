@@ -1,0 +1,5 @@
+stepDefinations\PaymentsStepDef.class
+stepDefinations\LoginStepDef.class
+stepDefinations\Dashboard.class
+hooks\Hooks.class
+runner\TestRunner.class
