@@ -31,6 +31,7 @@ public class LoginStepDef {
 	@Given("Launch the Application URL")
 	public void launch_the_Application_URL() {
 		System.out.println("Given -- Launch the Application URL ");
+		System.out.println("Duplicate Step");
 	}
 
 	@When("Click on Login button")
