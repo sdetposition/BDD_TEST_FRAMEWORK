@@ -4,23 +4,29 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+				git branch: 'master',
+					url: https://github.com/sdetposition/BDD_TEST_FRAMEWORK.git
                 echo 'CheckOut stage from Jenkins file'
                 echo 'Get the Code from GitHub repo'
             }
         }
 
-        stage('Build') {
+        stage('Clean Repo') {
             steps {
-               echo 'Build stage from Jenkins file'
-               echo 'Build with Maven commands'
+               sh 'mvn clean'
             }
         }
 
         stage('Test') {
             steps {
-               echo 'Test stage from Jenkins file'
-               echo 'Execution of Test'
+               sh 'mvn test'
             }
         }
     }
+    
+    post {
+		always {
+			 echo 'Execution completed.'
+		}
+	}
 }
