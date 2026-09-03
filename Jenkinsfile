@@ -1,12 +1,12 @@
 pipeline {
 
     agent any
-    
+
     parameters {
 
         choice(
             name: 'TEST_TYPE',
-            choices: ['smoke', 'db','sanity','others'],
+            choices: ['smoke', 'db', 'sanity', 'others'],
             description: 'Select Test Type'
         )
     }
@@ -15,6 +15,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
+
                 echo 'Checking out automation framework...'
 
                 git branch: 'master',
@@ -30,7 +31,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'mvn test -Dcucumber.filter.tags="@${params.TEST_TYPE}"
+                bat "mvn test -Dcucumber.filter.tags=@${params.TEST_TYPE}"
             }
         }
     }
