@@ -5,9 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
 				git branch: 'master',
-					url: https://github.com/sdetposition/BDD_TEST_FRAMEWORK.git
-                echo 'CheckOut stage from Jenkins file'
-                echo 'Get the Code from GitHub repo'
+					url: 'https://github.com/sdetposition/BDD_TEST_FRAMEWORK.git'
             }
         }
 
