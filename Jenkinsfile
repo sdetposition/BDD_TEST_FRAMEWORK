@@ -1,30 +1,48 @@
 pipeline {
+
     agent any
 
+    tools {
+        maven 'Maven'
+        jdk 'JDK21'
+    }
+
     stages {
+
         stage('Checkout') {
             steps {
-				git branch: 'master',
-					url: 'https://github.com/sdetposition/BDD_TEST_FRAMEWORK.git'
+                echo 'Checking out automation framework...'
+
+                git branch: 'master',
+                    url: 'https://github.com/sdetposition/BDD_TEST_FRAMEWORK.git'
             }
         }
 
-        stage('Clean Repo') {
+        stage('Clean') {
             steps {
-               sh 'mvn clean'
+                sh 'mvn clean'
             }
         }
 
         stage('Test') {
             steps {
-               sh 'mvn test'
+                sh 'mvn test'
             }
         }
     }
-    
+
     post {
-		always {
-			 echo 'Execution completed.'
-		}
-	}
+
+        success {
+            echo 'Test execution completed successfully.'
+        }
+
+        failure {
+            echo 'Test execution failed.'
+        }
+
+        always {
+            echo 'Pipeline execution completed.'
+        }
+    }
 }
