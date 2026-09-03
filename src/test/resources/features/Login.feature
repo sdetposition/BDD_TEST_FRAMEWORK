@@ -19,10 +19,10 @@ Feature: Login Functionality
   Then Verify the Login Page
   
   Examples:
-  |  user   					|  password 		|
+  |  user   			|  password 		|
   |  cnr465@xyz.com		|  cnr@123			|
   |	 Raman@man.com		|	 man@456      |
-  |  Rajan@yamn.com   |  Ranja@yaman20|
+  |  Rajan@yamn.com     |  Ranja@yaman20|
   
   @Test123
   Scenario: Validate with Data Table Example
