@@ -1,6 +1,15 @@
 pipeline {
 
     agent any
+    
+    parameters {
+
+        choice(
+            name: 'TEST_TYPE',
+            choices: ['smoke', 'db','sanity','others'],
+            description: 'Select Test Type'
+        )
+    }
 
     stages {
 
