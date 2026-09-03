@@ -25,5 +25,14 @@ public class Dashboard {
 		System.out.println(obj);
 		obj = obj.concat(" Group");
 		System.out.println(obj);
+		
+		String test = "Chadnra";
+		if(test.contains("Chadnra")) {
+			test = "Narayana";
+		} else {
+			System.out.println("No Exception");
+		}
+		
+		
 	}
 }

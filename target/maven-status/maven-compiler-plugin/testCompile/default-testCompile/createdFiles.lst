@@ -1,5 +1,6 @@
 stepDefinations\PaymentsStepDef.class
 stepDefinations\LoginStepDef.class
 stepDefinations\Dashboard.class
+runner\ReRunFailledTests.class
 hooks\Hooks.class
 runner\TestRunner.class

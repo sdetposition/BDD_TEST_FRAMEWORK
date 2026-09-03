@@ -1,11 +1,8 @@
 package stepDefinations;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
-public class PaymentsStepDef {
-	
+public class PaymentsStepDef {	
 	
 	@Then("Validate the Payments Page")
 	public void validate_the_Payments_Page() {

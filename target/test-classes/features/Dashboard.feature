@@ -10,6 +10,6 @@ Feature: Dashboard Page
     Given Login in as a User
     When Enter Valid Credentials with succesful login 
 
-	@smoke
+	@smoke @sanity
   Scenario: Validate Dashbaord page
     Then Validate the Dashboard Page with "Testing"

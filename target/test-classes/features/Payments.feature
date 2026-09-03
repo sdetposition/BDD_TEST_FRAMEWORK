@@ -5,7 +5,7 @@
 
 Feature: Payments Page
 
-	@smoke
+	@smoke @sanity
   Scenario: Payments Page Functionaility
     Given Login in as a User 
     When Enter Valid Credentials with succesful login

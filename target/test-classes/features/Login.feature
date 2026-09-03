@@ -13,6 +13,7 @@ Feature: Login Functionality
   Scenario: Validate the Login Page
     Then Verify the Login Page
   
+   @Test12
   Scenario Outline:
   And Enter valid "<user>" and "<password>"
   Then Verify the Login Page
@@ -23,6 +24,7 @@ Feature: Login Functionality
   |	 Raman@man.com		|	 man@456      |
   |  Rajan@yamn.com   |  Ranja@yaman20|
   
+  @Test123
   Scenario: Validate with Data Table Example
   Given Launch the Application URL
   When validate with below Data
